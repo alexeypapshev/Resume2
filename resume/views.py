@@ -11,3 +11,6 @@ def projects(request):
 def blog(request):
     return render(request, "blog.html")
 
+def texet(request):
+    return render(request, "texet.html")
+
