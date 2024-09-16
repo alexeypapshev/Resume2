@@ -1,155 +1,1009 @@
-{% load static %}
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Alexey Papshev</title>
-    <!-- <link href="/atom.xml" rel="alternate" title="Sourabh's Blog" type="application/atom+xml"> -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/syntax.css">
-    <link rel="stylesheet" href="/js/icons/style.css">
-    <link rel="stylesheet" id="font-bitter-css" href="https://fonts.googleapis.com/css?family=Bitter:400,700"
-        type="text/css" media="screen">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KC Okolo | Lead Mobile Developer (iOS, macOS, visionOS)</title>
 
+  <!--
+    - favicon
+  -->
+  <!-- <link rel="shortcut icon" href="./static/images/logo.ico" type="image/x-icon"> -->
 
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./static/css/style.css">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
-    <!-- <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script type="text/javascript" async=""
-            src="https://www.googletagmanager.com/gtag/js?id=G-9KMLEXY9WP&amp;l=dataLayer&amp;cx=c"></script> -->
-
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-40495390-2"></script>
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'UA-40495390-2');
-    </script>
-
-
-    <script>
-        var trackOutboundLink = function (url) {
-            gtag('event', 'click', {
-                'event_category': 'outbound',
-                'event_label': url,
-                'transport_type': 'beacon',
-                'event_callback': function () {
-                    document.location = url;
-                }
-            });
-        }
-    </script>
-
-
-    <!-- <script async=""
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
-
-    <!-- <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Sourabh Bajaj"},"description":"Sourabh’s portfolio and writings on machine learning, data science and distributed systems.","headline":"Sourabh","name":"Sourabh","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://sourabhbajaj.com/images/contents/NN.png"},"name":"Sourabh Bajaj"},"sameAs":["https://twitter.com/sourabhbajaj90","https://www.linkedin.com/in/sbajaj9","https://github.com/sb2nov","https://speakerdeck.com/sb2nov/"],"url":"https://sourabhbajaj.com/"}</script> -->
-
-
-    <!-- End Jekyll SEO tag -->
-    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
-<body class="home">
-    <div id="MathJax_Message" style="display: none;"></div>
-    <div id="container">
-        <div class="wrap">
-            <div id="header">
-                <div id="branding">
-                    <h1 id="site-title">
-                        <a href="/" title="Alexey Papshev" rel="Home">Alexey Papshev</a>
-                    </h1>
-                </div>
+<body>
 
-                {% include 'menu_primaru.html' %}
+  <!--
+    - #MAIN
+  -->
 
-                <div class="clear"></div>
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./static/images/IMG_8024.JPG" alt="KC Okolo" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="KC Okolo">KC Okolo</h1>
+
+          <p class="title">Lead Mobile Developer</p>
+          <p class="subtitle">iOS, macOS, visionOS</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
 
-            <div id="content">
-                <div class="hfeed">
-                    <hr>
-                    <div class="hentry post no-border">
-                        <a href="https://corise.com/" onclick="trackOutboundLink('https://corise.com/');">
-                            <img src="{% static 'images/photo.jpg' %}" alt="CoRise"
-                                class="archive-thumbnail home-thumbnail" width="160" height="200"></a>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:mr@kenech.io" class="contact-link">mr@kenech.io</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+447491893526" class="contact-link">+44 (0) 7491 893 526</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>London, United Kingdom</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/kenechiokolo" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/kc-okolo-64906ab4/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/kc0kolo/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
 
 
-                        <div class="entry-summary">
-                            <p>My name is Alexey Papshev.
-                                I have been working at PJSC MegaFon for 7 years, my main activity is Backup and
-                                development of backup automation tools.
-                            </p>
 
-                            <p>
-                                My&nbsp;name is&nbsp;Alexey, I&nbsp;am a&nbsp;senior backup engineer.<br>
 
-                                At&nbsp;PJSC MegaFon, I&nbsp;plan, design and implement solutions in&nbsp;the backup
-                                infrastructure of&nbsp;file
-                                systems and databases Oracle, MSSQL, SAP, Exchange for optimal performance and
-                                uninterrupted operation
-                                of&nbsp;business systems.<br>
 
-                                I&nbsp;am also developing automation of&nbsp;backup tools using the Python programming
-                                language.
+    <!--
+      - #main-content
+    -->
 
-                                Experience with VMware vSphere 5.1/6&nbsp;or higher; MS&nbsp;Windows Server 2010&nbsp;or
-                                higher,
-                                Linux/Unix OS;
-                            </p>
+    <div class="main-content">
 
-                            <p>Research, testing and implementation of&nbsp;alternative Data Protector backup tools.</p>
-                        </div>
-                        <hr>
-                        <p>
-                            Site for work is
-                            <a href="https://www.hpe.com/emea_europe/en/home.html" onclick="hpe('https://www.hpe.com/emea_europe/en/home.html');">Tech HPe</a> 
-                            and 
-                            <a href="https://backupsolution.ru/" onclick="backupsolution('https://backupsolution.ru/');">Backup Solution</a>.
-                        </p>
+      <!--
+        - #NAVBAR
+      -->
 
-                    </div>
-                </div>
+      <nav class="navbar">
 
-            </div><!-- #content -->
+        <ul class="navbar-list">
 
-            <div class="clear"></div>
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
 
-            {% include 'footer.html' %}
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
 
-        </div><!-- .wrap -->
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
 
-    </div><!-- #container -->
+          <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li> -->
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="/js/toc/toc.js" type="text/javascript" charset="utf-8"></script>
-    <!-- <script type="text/javascript">
-    $(document).ready(function () {
-        $('.toc').toc({
-            title: '',
-            listType: 'ol',
-            minimumHeaders: 2,
-            headers: 'h2, h3, h4, h5, h6',
-            linkHere: true,
-            linkHereTitle: 'Link here',
-            backToTop: true,
-            backToTopId: 'toc',
-            backToTopTitle: 'Back to Table of Contents',
-        });
-        $('.jekyll-toc-header a.jekyll-toc-link-here span.jekyll-toc-icon').addClass('icon icon-link');
-        $('.jekyll-toc-header a.jekyll-toc-back-to-top span.jekyll-toc-icon').addClass('icon icon-chevron-up');
-    });
-</script> -->
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hi! I am a backup software engineer with extensive experience in managing backup applications.
+            I have 8 years of experience in operating and automating backup systems processes.
+          </p>
+
+          <p>
+            My main task is to create a functional user interface and user experience, as well as implement the latest technologies for process automation.
+          </p>
+
+          <p>
+            Take a look around, and if you like what you see, reach out to me via email or LinkedIn!
+          </p>
+
+        </section>
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Companies I've Worked With</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="https://www.beatsbydre.com" target="_blank">
+                <img src="./static/images/beatslogo2.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.beginlearning.com" target="_blank">
+                <img src="./static/images/begin.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://marshall.com" target="_blank">
+                <img src="./static/images/marshalllogo.svg.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.enterprise.com/en/home.html" target="_blank">
+                <img src="./static/images/enterpriselogo.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://perigee.se" target="_blank">
+                <img src="./static/images/perigee.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Senior iOS Developer | Marshall Group</h4>
+
+              <span>April 2023 — Present</span>
+
+              <p class="timeline-text">
+              <ul>
+                <li class="timeline-text">Engineered a ground-up architectural redesign and rebuild of the flagship
+                  Marshall app, significantly reducing development timelines.</li>
+                <li class="timeline-text">Led the transition from external contractors to an internal development team,
+                  highlighting the value to management of building and managing in-house expertise.</li>
+                <li class="timeline-text">Mentored junior developers, fostering a collaborative and growth-oriented team
+                  environment.</li>
+              </ul>
+
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Lead Mobile Developer | Firstborn</h4>
+
+              <span>July 2020 — August 2022</span>
+
+              <p class="timeline-text">
+              <ul>
+                <li class="timeline-text">Spearheaded the end-to-end development and successful on-time delivery of 3
+                  high-profile
+                  mobile applications for Beats by Dre.</li>
+                <li class="timeline-text">Effectively managed a small team of developers, fostering collaboration with
+                  internal teams (UX,
+                  QA & Design) and external stakeholders (clients & vendors).</li>
+              </ul>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Senior iOS Developer | Begin</h4>
+
+              <span>March 2017 — August 2019</span>
+
+              <p class="timeline-text">
+              <ul>
+                <li class="timeline-text">Managed deployment and coordinated testing with QA.</li>
+                <li class="timeline-text">Worked very closely with Product & UX on implementing new features and
+                  iterating older ones.</li>
+                <li class="timeline-text">Updated significant portions of the codebase to Swift from Objective-C.</li>
+                <li class="timeline-text">Designed the architecture and developed HOMER Stories: Kids Library v1 from
+                  conception to
+                  launch.</li>
+              </ul>
+
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Lund University School of Economics and Management</h4>
+
+              <span>2013 — 2015</span>
+
+              <p class="timeline-text">
+                Master of Science - MSc, International Economics
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Queen Mary, University of London</h4>
+
+              <span>2006 — 2009</span>
+
+              <p class="timeline-text">
+                Bachelors of Science - BSc, Economics
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Personal Projects</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <a href="https://apps.apple.com/al/app/studybreak-productivity-timer/id1020691962">
+                <h4 class="h4 timeline-item-title">StudyBreak Time Tracker</h4>
+              </a>
+              <p class="timeline-text">
+                Student time management app with over 200k downloads.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <a href="https://apps.apple.com/us/app/ai-fitness/id1184450747">
+                <h4 class="h4 timeline-item-title">AI Fitness</h4>
+              </a>
+              <p class="timeline-text">
+                AI Powered fitness app for generating personalized workout and meal plans.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <a href="https://apps.apple.com/al/app/panda-ai-prompt-database/id6445854325">
+                <h4 class="h4 timeline-item-title">Panda</h4>
+              </a>
+              <p class="timeline-text">
+                AI Prompt Database & Community emphasizing user interaction.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">Technologies</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">iOS | macOS | visionOS | watchOS | Flutter | Python | SwiftUI | Swift | ARKit |
+                  RealityKit | CoreBluetooth | LLM | ML | CoreML | Prompt Engineering | IOT | Generative AI Tools | Multithreaded Programming
+                 | Agile Methodology | Object Oriented Analysis/Design | MVVM | Scrum Methodology | User Experience Design | Xcode</h5>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+
+        <section>
+
+          <a class="download-link" href="k_okolo_resume.pdf" download="Resume">Download My Resume</a>
+
+        </section>
+
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+
+            <li class="filter-item">
+              <button data-filter-btn>Multiplatform</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>iOS / iPadOS</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>iOS / iPadOS</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Multiplatform</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="ios / ipados">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/beatstempo.webp" alt="beats flex" loading="lazy">
+                </figure>
+
+                <button class="project-title" data-nav-link>Beats Flex Demo</button>
+
+                <p class="project-category">iOS, iPadOS</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="multiplatform">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/aifit3.png" alt="ai fitness" loading="lazy">
+                </figure>
+
+                <button class="project-title" data-nav-link>AI Fitness</button>
+
+                <p class="project-category">iOS, visionOS</p>
+
+              </a>
+            </li>
+
+            <!-- <li class="project-item  active" data-filter-item data-category="multiplatform">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/project-5.png" alt="studybreak" loading="lazy">
+                </figure> -->
+
+            <!-- <button class="project-title" data-nav-link>StudyBreak</button>
+
+                <p class="project-category">iOS, iPadOS, macOS, watchOS</p>
+
+              </a>
+            </li> -->
+
+            <li class="project-item  active" data-filter-item data-category="ios / ipados">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/homerapps.png" alt="homer" loading="lazy">
+                </figure>
+
+                <button class="project-title" data-nav-link>HOMER</button>
+
+                <p class="project-category">iPadOS</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="multiplatform">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/studybreak.jpeg" alt="studybreak" loading="lazy">
+                </figure>
+
+                <button class="project-title" data-nav-link>StudyBreak</button>
+
+                <p class="project-category">iOS, watchOS</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="multiplatform">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/seven.jpg" alt="seven" loading="lazy">
+                </figure>
+
+                <button class="project-title" data-nav-link>Seven</button>
+
+                <p class="project-category">iOS, watchOS</p>
+
+              </a>
+            </li>
+
+            <!-- <li class="project-item  active" data-filter-item data-category="multiplatform">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/project-7.png" alt="fitness pro" loading="lazy">
+                </figure> -->
+
+            <!-- <button class="project-title" data-nav-link>Fitness Pro</button>
+
+                <p class="project-category">iOS, watchOS</p>
+
+              </a>
+            </li> -->
+
+
+          
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="beats flex demo">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section>
+          <div>
+            <h3 class="h3">Beats Flex Demo</h3>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">A demo iOS & iPad app built to provide global audiences a full interactive
+                learning experience about upcoming products and their features before and after the product
+                release.<br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Client</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Beats By Dre<br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Agency</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Firstborn<br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Role</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Lead Mobile Developer<br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Tech Stack</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Swift, UIKit, SwiftUI, ARKit, AVKit, CD/CI<br><br></li>
+            </ul>
+          </div>
+
+          <div class="video-container">
+            <video controls width="375" height="667">
+              <source src="beatsflex.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+        </section>
+      </article>
+
+      <article class="contact" data-page="ai fitness">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section>
+          <div>
+            <h3 class="h3">AI Fitness (Personal Project)</h3>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">AI powered fitness app for generating personalised workout and meals
+                plans.<br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Role</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">App Developer, Creator<br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Tech Stack</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Swift, SwiftUI, Generative AI, Google Cloud, CloudKit<br><br></li>
+            </ul>
+          </div>
+
+          <img src="static/images/aifit3.png" alt="Fitness Image" class="resizable-image">
+
+          <h1>
+            <a class="appstore-link" href="https://apps.apple.com/us/app/ai-fitness/id1184450747"> App Store Link</a>
+          </h1>
+
+
+        </section>
+      </article>
+
+      <article class="contact" data-page="fitness pro">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section>
+          <div>
+            <h3 class="h3">Personal Project | Fitness Pro</h3>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Fitness tracking app focusing on user experience<br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Role</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Developer, Creator<br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Tech Stack</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Swift, SwiftUI, Swift Package Manager, Xcode Cloud, CloudKit<br><br></li>
+            </ul>
+          </div>
+
+          <video controls width="375" height="667">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+        </section>
+      </article>
+
+      <article class="contact" data-page="homer">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section>
+          <div>
+            <h3 class="h3">HOMER Learning & HOMER Stories</h3>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Early learning apps designed to help children learn to love reading.<br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Company</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Begin<br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Role</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Senior iOS Engineer, App Lead<br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Tech Stack</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Swift, UIKit, Objecticve-C, Cocoapods, AVKit, UI Testing, Unit Testing<br><br>
+              </li>
+            </ul>
+          </div>
+
+          <img src="static/images/homerlearning.jpg" alt="homer learning img" class="resizable-image">
+
+          <h1>
+            <a class="appstore-link" href="https://apps.apple.com/us/app/homer-fun-learning-for-kids/id601437586"> App
+              Store Link</a>
+          </h1>
+
+        </section>
+      </article>
+
+      <article class="contact" data-page="studybreak">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section>
+          <div>
+            <h3 class="h3">Personal Project - StudyBreak Time Tracker</h3>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">AI powered pomodoro, class & exam preparation app for students <br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Role</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Developer, Creator<br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Tech Stack</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Swift, UIKit, SwiftUI, Generative AI, Swift Package Manager<br><br></li>
+            </ul>
+          </div>
+
+          <img src="static/images/studybreak.jpeg" alt="studybreaj img" class="resizable-image">
+
+          <h1>
+            <a class="appstore-link" href="https://apps.apple.com/al/app/studybreak-productivity-timer/id1020691962"> App
+              Store Link</a>
+          </h1>
+
+        </section>
+      </article>
+
+      <article class="contact" data-page="seven">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section>
+          <div>
+            <h3 class="h3">Seven - Quick At Home Workouts</h3>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">7 Minute Workout app with 3D animation<br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Role</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">iOS Developer<br><br></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="h4">Tech Stack</h4>
+          </div>
+
+          <div>
+            <ul>
+              <li class="timeline-text">Swift, UIKit, AVKit, CloudKit, SpriteKit<br><br></li>
+            </ul>
+          </div>
+
+          <img src="static/images/seven.jpg" alt="seven img" class="resizable-image">
+
+          <h1>
+            <a class="appstore-link" href="https://itunes.apple.com/us/app/7-minute-workout-seven-high/id650276551"> App
+              Store Link</a>
+          </h1>
+
+        </section>
+      </article>
+
+  </main>
+
+  <script src="./static/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
